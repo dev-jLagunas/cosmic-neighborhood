@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue";
-import logo from "@/assets/logo/spacelogo.png";
 import PlanetLink from "../components/PlanetLink.vue";
 import mercury from "@/assets/planets/planet-mercury.svg";
 import venus from "@/assets/planets/planet-venus.svg";
@@ -15,14 +13,71 @@ import neptune from "@/assets/planets/planet-neptune.svg";
 <template>
   <nav class="mt-60 overflow-x-hidden overflow-y-visible">
     <ul class="flex flex-col gap-4 text-slate-200 pt-8">
-      <PlanetLink :imgSrc="mercury" name="Mercury" />
-      <PlanetLink :imgSrc="venus" name="Venus" />
-      <PlanetLink :imgSrc="earth" name="Earth" />
-      <PlanetLink :imgSrc="mars" name="Mars" />
-      <PlanetLink :imgSrc="jupiter" name="Jupiter" />
-      <PlanetLink :imgSrc="saturn" name="Saturn" />
-      <PlanetLink :imgSrc="uranus" name="Uranus" />
-      <PlanetLink :imgSrc="neptune" name="Neptune" />
+      <PlanetLink
+        :imgSrc="mercury"
+        name="Mercury"
+        class="planet-link"
+        style="animation-delay: 0s"
+      />
+      <PlanetLink
+        :imgSrc="venus"
+        name="Venus"
+        class="planet-link"
+        style="animation-delay: 0.1s"
+      />
+      <PlanetLink
+        :imgSrc="earth"
+        name="Earth"
+        class="planet-link"
+        style="animation-delay: 0.2s"
+      />
+      <PlanetLink
+        :imgSrc="mars"
+        name="Mars"
+        class="planet-link"
+        style="animation-delay: 0.3s"
+      />
+      <PlanetLink
+        :imgSrc="jupiter"
+        name="Jupiter"
+        class="planet-link"
+        style="animation-delay: 0.4s"
+      />
+      <PlanetLink
+        :imgSrc="saturn"
+        name="Saturn"
+        class="planet-link"
+        style="animation-delay: 0.5s"
+      />
+      <PlanetLink
+        :imgSrc="uranus"
+        name="Uranus"
+        class="planet-link"
+        style="animation-delay: 0.6s"
+      />
+      <PlanetLink
+        :imgSrc="neptune"
+        name="Neptune"
+        class="planet-link"
+        style="animation-delay: 0.7s"
+      />
     </ul>
   </nav>
 </template>
+
+<style scoped>
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.planet-link {
+  animation: slideInFromRight 0.5s ease forwards;
+}
+</style>

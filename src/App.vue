@@ -17,15 +17,36 @@ const toggleSidebar = ref(false);
     </h1>
     <button
       @click="toggleSidebar = !toggleSidebar"
-      class="text-white md:hidden"
+      class="text-white md:hidden duration-500 hover:scale-125"
     >
-      <i class="fa-solid fa-bars text-2xl"></i>
+      <i
+        :class="
+          toggleSidebar
+            ? 'fa-solid fa-times text-2xl'
+            : 'fa-solid fa-bars text-2xl'
+        "
+      ></i>
     </button>
   </header>
   <Navbar class="hidden md:block" />
-  <Sidebar
-    class="block fixed inset-0 bg-space-color bg-opacity-90 md:hidden"
-    v-if="toggleSidebar"
-  />
+  <transition name="fade">
+    <Sidebar
+      class="block fixed inset-0 bg-space-color bg-opacity-90 md:hidden"
+      v-if="toggleSidebar"
+    />
+  </transition>
   <RouterView />
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}
+</style>
