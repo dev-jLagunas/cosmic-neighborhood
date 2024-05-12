@@ -11,7 +11,7 @@ const toggleSidebar = ref(false);
 
 <template>
   <header class="text-center md:border-b">
-    <img :src="logo" alt="space logo" class="w-40 mx-auto" />
+    <img :src="logo" alt="space logo" class="w-32 mx-auto" />
     <h1 class="text-3xl text-center tracking-widest text-slate-50 mb-4">
       OUR COSMIC NEIGHBORHOOD
     </h1>
@@ -24,7 +24,7 @@ const toggleSidebar = ref(false);
   </header>
   <Navbar class="hidden md:block" />
   <Sidebar
-    class="block fixed inset-0 bg-space-color bg-opacity-75 md:hidden"
+    class="block fixed inset-0 bg-space-color bg-opacity-90 md:hidden"
     v-if="toggleSidebar"
   />
   <RouterView />

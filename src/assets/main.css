@@ -22,5 +22,6 @@ body {
   background-image: url("../assets/bg/spacebg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
   font-family: "Antonio";
 }
