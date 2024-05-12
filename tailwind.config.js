@@ -2,7 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        antonio: ["Antonio", "sans-serif"],
+        "league-spartan": ['"League Spartan"', "sans-serif"],
+      },
+      colors: {
+        "space-color": "#000117",
+      },
+    },
   },
   plugins: [],
 };
