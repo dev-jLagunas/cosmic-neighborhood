@@ -28,7 +28,7 @@ const navigate = async (to) => {
 </script>
 
 <template>
-  <nav class="mt-60 overflow-x-hidden overflow-y-visible">
+  <nav class="mt-60 overflow-x-hidden overflow-y-visible z-50">
     <ul class="flex flex-col gap-4 text-slate-200 pt-8">
       <PlanetLink
         :imgSrc="mercury"
