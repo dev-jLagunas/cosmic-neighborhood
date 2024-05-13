@@ -4,7 +4,6 @@ import mercury from "@/assets/planets/planet-mercury.svg";
 import mercuryInternal from "@/assets/planets/planet-mercury-internal.svg";
 // import mercuryGeology from "@/assets/planets/geology-mercury.png";
 
-// Define the tabs
 const tabs = [
   {
     id: "overview",
