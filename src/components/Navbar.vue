@@ -20,22 +20,25 @@ const navigate = async (to) => {
         <a @click="navigate('/mercury')">MERCURY</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        VENUS
+        <a @click="navigate('/venus')">VENUS</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        EARTH
+        <a @click="navigate('/earth')">EARTH</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        MARS
+        <a @click="navigate('/mars')">MARS</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        JUPITER
+        <a @click="navigate('/jupiter')">JUPITER</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        SATURN
+        <a @click="navigate('/saturn')">SATURN</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        URANUS
+        <a @click="navigate('/uranus')">URANUS</a>
+      </li>
+      <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
+        <a @click="navigate('/neptune')">NEPTUNE</a>
       </li>
     </ul>
   </nav>

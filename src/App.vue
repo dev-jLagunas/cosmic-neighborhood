@@ -33,6 +33,7 @@ const toggleSidebar = ref(false);
     <transition name="fade">
       <Sidebar
         class="block fixed inset-0 bg-space-color bg-opacity-90 md:hidden"
+        @closeSidebar="toggleSidebar = false"
         v-if="toggleSidebar"
       />
     </transition>
