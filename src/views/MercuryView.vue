@@ -1,11 +1,11 @@
 <script setup>
 import mercury from "@/assets/planets/planet-mercury.svg";
+import PlanetDisplay from "@/components/PlanetDisplay.vue";
 </script>
 
 <template>
   <section>
-    <h1>Mercury goes here</h1>
-    <img :src="mercury" alt="" />
+    <PlanetDisplay />
   </section>
 </template>
 
