@@ -7,6 +7,7 @@ import MarsView from "@/views/MarsView.vue";
 import JupiterView from "@/views/JupiterView.vue";
 import SaturnView from "@/views/SaturnView.vue";
 import UranusView from "@/views/UranusView.vue";
+import NeptuneVue from "@/views/NeptuneView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +51,11 @@ const router = createRouter({
       path: "/uranus",
       name: "uranus",
       component: UranusView,
+    },
+    {
+      path: "/neptune",
+      name: "neptune",
+      component: NeptuneVue,
     },
   ],
 });

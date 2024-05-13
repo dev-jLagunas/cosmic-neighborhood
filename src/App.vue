@@ -10,9 +10,11 @@ const toggleSidebar = ref(false);
 </script>
 
 <template>
-  <main class="h-screen overflow-hidden">
+  <main class="h-screen overflow-x-hidden overflow-y-scroll">
     <header class="text-center md:border-b">
-      <img :src="logo" alt="space logo" class="w-32 mx-auto" />
+      <router-link to="/">
+        <img :src="logo" alt="space logo" class="w-32 mx-auto" />
+      </router-link>
       <h1 class="text-3xl text-center tracking-widest text-slate-50 mb-4">
         OUR COSMIC NEIGHBORHOOD
       </h1>

@@ -10,6 +10,9 @@ export default {
       colors: {
         "space-color": "#000117",
       },
+      width: {
+        "90vw": "90vw",
+      },
     },
   },
   plugins: [],

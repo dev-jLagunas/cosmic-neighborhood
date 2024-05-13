@@ -1,3 +1,11 @@
+<script setup>
+import PlanetDisplay from "@/components/PlanetDisplay.vue";
+</script>
+
 <template>
-  <h1>Venus here buddy</h1>
+  <section>
+    <PlanetDisplay />
+  </section>
 </template>
+
+<style scoped></style>
