@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
+import { useAnimationStore } from "@/stores/animationStore";
 import astronautFront from "@/assets/astronaut/astronaut-front.png";
 import astronautSide from "@/assets/astronaut/astronaut-side.png";
 import astronautBack1 from "@/assets/astronaut/astronaut-back1.png";
@@ -9,7 +10,32 @@ import astronautBack4 from "@/assets/astronaut/astronaut-back4.png";
 import astronautBack5 from "@/assets/astronaut/astronaut-back5.png";
 import astronautBack6 from "@/assets/astronaut/astronaut-back6.png";
 
+// State
 const currentIndex = ref(0);
+const intervalRef = ref(null);
+
+// Methods
+const startAnimation = () => {
+  if (intervalRef.value !== null) return;
+  intervalRef.value = setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % images.length;
+    if (currentIndex.value === 0) {
+      clearInterval(intervalRef.value);
+      intervalRef.value = null;
+      animationStore.resetAnimationTrigger();
+    }
+  }, 1100);
+};
+
+// Store
+const animationStore = useAnimationStore();
+watchEffect(() => {
+  if (animationStore.triggeredByRouting) {
+    startAnimation();
+  }
+});
+
+// Variables
 const images = [
   astronautFront,
   astronautSide,
@@ -20,19 +46,6 @@ const images = [
   astronautBack5,
   astronautBack6,
 ];
-
-const intervalRef = ref(null);
-
-const startAnimation = () => {
-  if (intervalRef.value !== null) return;
-  intervalRef.value = setInterval(() => {
-    currentIndex.value = (currentIndex.value + 1) % images.length;
-    if (currentIndex.value === 0) {
-      clearInterval(intervalRef.value);
-      intervalRef.value = null;
-    }
-  }, 1100);
-};
 </script>
 
 <template>
@@ -51,14 +64,6 @@ const startAnimation = () => {
       />
     </div>
   </section>
-  <div class="absolute bottom-10 right-10">
-    <button
-      @click="startAnimation"
-      class="border hover:cursor-pointer p-4 rounded-md"
-    >
-      Howdy partner!
-    </button>
-  </div>
 </template>
 
 <style scoped>

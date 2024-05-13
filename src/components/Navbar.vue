@@ -1,12 +1,23 @@
 <script setup>
-import logo from "@/assets/logo/spacelogo.png";
+import { useAnimationStore } from "@/stores/animationStore";
+import { useRouter } from "vue-router";
+
+// Store
+const { triggerAnimation } = useAnimationStore();
+
+// Router
+const router = useRouter();
+const navigate = async (to) => {
+  await triggerAnimation();
+  router.push(to);
+};
 </script>
 
 <template>
   <nav class="border-b w-full py-4">
     <ul class="flex justify-evenly text-slate-200">
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        MERCURY
+        <a @click="navigate('/mercury')">MERCURY</a>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
         VENUS

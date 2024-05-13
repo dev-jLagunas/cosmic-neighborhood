@@ -36,7 +36,11 @@ const toggleSidebar = ref(false);
         v-if="toggleSidebar"
       />
     </transition>
-    <RouterView />
+    <router-view v-slot="{ Component }">
+      <transition name="page">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </main>
 </template>
 
@@ -50,5 +54,14 @@ const toggleSidebar = ref(false);
 .fade-leave-to {
   opacity: 0;
   transform: translateY(100%);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 3s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 </style>
