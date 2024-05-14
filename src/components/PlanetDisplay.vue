@@ -30,7 +30,7 @@ const changeTab = (id) => {
       <button
         v-for="tab in props.tabs"
         :key="tab.id"
-        class="text-xl md:text-base md:border md:border-slate-700 md:px-4 md:py-2 md:w-72 md:hover:bg-slate-500 md:hover:bg-opacity-50 duration-300"
+        class="text-xl hover:scale-110 md:text-base md:border md:border-slate-700 md:px-4 md:py-2 md:w-72 md:hover:bg-slate-500 md:hover:bg-opacity-50 duration-300"
         :class="{ active: activeTab === tab.id }"
         @click="changeTab(tab.id)"
       >

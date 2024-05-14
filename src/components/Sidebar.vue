@@ -31,60 +31,60 @@ const navigate = async (to) => {
 
 <template>
   <nav class="mt-60 overflow-x-hidden overflow-y-visible z-50">
-    <ul class="flex flex-col gap-4 text-slate-200 pt-8">
+    <ul class="flex flex-col text-slate-200">
       <PlanetLink
         :imgSrc="mercury"
         name="Mercury"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0s"
         @click="navigate('/mercury')"
       />
       <PlanetLink
         :imgSrc="venus"
         name="Venus"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.1s"
         @click="navigate('/venus')"
       />
       <PlanetLink
         :imgSrc="earth"
         name="Earth"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.2s"
         @click="navigate('/earth')"
       />
       <PlanetLink
         :imgSrc="mars"
         name="Mars"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.3s"
         @click="navigate('/mars')"
       />
       <PlanetLink
         :imgSrc="jupiter"
         name="Jupiter"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.4s"
         @click="navigate('/jupiter')"
       />
       <PlanetLink
         :imgSrc="saturn"
         name="Saturn"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.5s"
         @click="navigate('/saturn')"
       />
       <PlanetLink
         :imgSrc="uranus"
         name="Uranus"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.6s"
         @click="navigate('/uranus')"
       />
       <PlanetLink
         :imgSrc="neptune"
         name="Neptune"
-        class="planet-link"
+        class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.7s"
         @click="navigate('/neptune')"
       />
