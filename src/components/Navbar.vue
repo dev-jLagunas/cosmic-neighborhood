@@ -8,7 +8,10 @@ const { triggerAnimation } = useAnimationStore();
 // Router
 const router = useRouter();
 const navigate = async (to) => {
-  await triggerAnimation();
+  if (router.currentRoute.value.name === "home") {
+    await triggerAnimation();
+  }
+
   router.push(to);
 };
 </script>

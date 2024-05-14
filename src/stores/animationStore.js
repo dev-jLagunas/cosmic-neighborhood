@@ -10,7 +10,7 @@ export const useAnimationStore = defineStore({
     triggerAnimation() {
       this.triggeredByRouting = true;
 
-      return new Promise((resolve) => setTimeout(resolve, 8000)); // wait for 10 seconds
+      return new Promise((resolve) => setTimeout(resolve, 8000));
     },
     resetAnimationTrigger() {
       this.triggeredByRouting = false;

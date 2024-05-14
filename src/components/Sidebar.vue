@@ -22,7 +22,9 @@ const emit = defineEmits(["closeSidebar"]);
 const router = useRouter();
 const navigate = async (to) => {
   emit("closeSidebar");
-  await triggerAnimation();
+  if (router.currentRoute.value.name === "home") {
+    await triggerAnimation();
+  }
   router.push(to);
 };
 </script>
