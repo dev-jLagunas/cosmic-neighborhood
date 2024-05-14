@@ -41,7 +41,7 @@ const activeTab = ref(props.tabs[0].id);
           class="mx-auto h-20 my-8 md:h-44 lg:h-80 lg:row-span-2"
         />
         <div
-          class="px-4 flex flex-col w-90vw md:w-1/2 md:px-0 lg:w-full lg:pl-2"
+          class="px-4 flex flex-col w-90vw md:w-1/2 md:px-0 lg:w-full lg:pl-6"
         >
           <h1 class="text-4xl font-antonio">{{ tab.planet }}</h1>
           <h4 class="text-slate-400 tracking-widest">{{ tab.name }}</h4>
@@ -49,6 +49,9 @@ const activeTab = ref(props.tabs[0].id);
           <p>
             <span class="text-slate-400 pr-2 tracking-widest">Source:</span
             >Wikipedia
+            <a :href="tab.source" target="_blank">
+              <i class="fa-solid fa-link font-xs pl-2"></i>
+            </a>
           </p>
         </div>
       </div>
