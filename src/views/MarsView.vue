@@ -40,7 +40,7 @@ const planetData = {
   temperature: "-28°c",
 };
 
-const planetSkin = "src/assets/3d-skins/mars-skin.jpg";
+const planetSkin = "3d-skins/mars-skin.jpg";
 </script>
 
 <template>

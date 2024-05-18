@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
-import stars from "@/assets/3d-skins/stardot.png";
+import stars from "/3d-skins/stardot.png";
 
 // Props
 const props = defineProps(["planetSkin"]);

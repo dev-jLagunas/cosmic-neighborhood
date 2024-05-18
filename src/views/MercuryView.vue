@@ -41,7 +41,7 @@ const planetData = {
   temperature: "430°c",
 };
 
-const planetSkin = "src/assets/3d-skins/mercury-skin.jpg";
+const planetSkin = "3d-skins/mercury-skin.jpg";
 </script>
 
 <template>
