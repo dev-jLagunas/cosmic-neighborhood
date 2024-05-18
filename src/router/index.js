@@ -57,6 +57,10 @@ const router = createRouter({
       name: "neptune",
       component: NeptuneVue,
     },
+    {
+      path: "/:pathMatch(.*)",
+      redirect: "/",
+    },
   ],
 });
 
