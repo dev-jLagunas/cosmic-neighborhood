@@ -2,6 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import earth from "@/assets/planets/planet-mars.svg";
 import earthInternal from "@/assets/planets/planet-mars-internal.svg";
+import marsGeology from "@/assets/planets/geology-mars.png";
 
 const tabs = [
   {
@@ -30,6 +31,7 @@ const tabs = [
       "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.",
     source: "https://en.wikipedia.org/wiki/Mars#Surface_geology",
     img: earth,
+    imgGeo: marsGeology,
   },
 ];
 

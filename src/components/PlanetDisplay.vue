@@ -55,16 +55,25 @@ const close3Dmodel = () => {
       <div
         v-for="tab in activeTabContent"
         :key="tab.id"
-        class="text-center md:text-start lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center"
+        class="text-center md:text-start lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:place-items-center lg:h-96"
         :class="{ active: activeTab === tab.id }"
       >
-        <img
-          :src="tab.img"
-          alt="planet images"
-          :class="{ 'roll-in-blurred-left': animate }"
-          class="mx-auto h-20 my-8 md:h-44 lg:h-80 lg:row-span-2"
-          @animationend="animate = false"
-        />
+        <figure class="relative lg:mt-40">
+          <img
+            :src="tab.img"
+            alt="planet images"
+            :class="{ 'roll-in-blurred-left': animate }"
+            class="mx-auto h-20 my-8 md:h-44 lg:h-80 lg:row-span-2"
+            @animationend="animate = false"
+          />
+          <img
+            v-if="tab.id === 'geology'"
+            :src="tab.imgGeo"
+            alt="planet geology pointer"
+            class="absolute top-8 left-60 h-20 -rotate-45 md:left-96 md:h-30 md:top-20 lg:left-44 lg:top-44 lg:h-40"
+          />
+        </figure>
+
         <div
           class="px-4 flex flex-col w-90vw md:w-1/2 md:px-0 lg:w-full lg:pl-6"
         >
@@ -99,7 +108,7 @@ const close3Dmodel = () => {
       </ul>
     </div>
     <div
-      class="w-90vw mx-auto my-4 hover:bg-slate-500 hover:bg-opacity-50 duration-300 lg:w-2/3 2xl:w-1/3"
+      class="w-90vw mx-auto my-4 hover:bg-slate-500 hover:bg-opacity-50 duration-300 md:w-1/2 lg:w-2/3 2xl:w-1/3"
     >
       <button
         class="text-xl border border-slate-700 px-4 py-2 w-full text-slate-300"

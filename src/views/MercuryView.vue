@@ -2,7 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import mercury from "@/assets/planets/planet-mercury.svg";
 import mercuryInternal from "@/assets/planets/planet-mercury-internal.svg";
-// import mercuryGeology from "@/assets/planets/geology-mercury.png";
+import mercuryGeology from "@/assets/planets/geology-mercury.png";
 
 const tabs = [
   {
@@ -31,6 +31,7 @@ const tabs = [
       "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s.",
     source: "https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology",
     img: mercury,
+    imgGeo: mercuryGeology,
   },
 ];
 

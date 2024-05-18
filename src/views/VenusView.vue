@@ -2,6 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import venus from "@/assets/planets/planet-venus.svg";
 import venusInternal from "@/assets/planets/planet-venus-internal.svg";
+import venusGeology from "@/assets/planets/geology-venus.png";
 
 const tabs = [
   {
@@ -30,6 +31,7 @@ const tabs = [
       "Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii.",
     source: "https://en.wikipedia.org/wiki/Venus#Surface_geology",
     img: venus,
+    imgGeo: venusGeology,
   },
 ];
 

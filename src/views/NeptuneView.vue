@@ -2,6 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import neptune from "@/assets/planets/planet-neptune.svg";
 import neptuneInternal from "@/assets/planets/planet-neptune-internal.svg";
+import neptuneGeology from "@/assets/planets/geology-neptune.png";
 
 const tabs = [
   {
@@ -30,6 +31,7 @@ const tabs = [
       "Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.",
     source: "https://en.wikipedia.org/wiki/Neptune#Atmosphere",
     img: neptune,
+    imgGeo: neptuneGeology,
   },
 ];
 

@@ -2,6 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import earth from "@/assets/planets/planet-earth.svg";
 import earthInternal from "@/assets/planets/planet-earth-internal.svg";
+import earthGeology from "@/assets/planets/geology-earth.png";
 
 const tabs = [
   {
@@ -30,6 +31,7 @@ const tabs = [
       "The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.",
     source: "https://en.wikipedia.org/wiki/Earth#Surface",
     img: earth,
+    imgGeo: earthGeology,
   },
 ];
 

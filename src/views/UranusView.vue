@@ -2,6 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import uranus from "@/assets/planets/planet-uranus.svg";
 import uranusInternal from "@/assets/planets/planet-uranus-internal.svg";
+import uranusGeology from "@/assets/planets/geology-uranus.png";
 
 const tabs = [
   {
@@ -30,6 +31,7 @@ const tabs = [
       "The composition of Uranus's atmosphere is different from its bulk, consisting mainly of molecular hydrogen and helium. The helium molar fraction, i.e. the number of helium atoms per molecule of gas, is 0.15±0.03 in the upper troposphere.",
     source: "https://en.wikipedia.org/wiki/Uranus#Atmosphere",
     img: uranus,
+    imgGeo: uranusGeology,
   },
 ];
 

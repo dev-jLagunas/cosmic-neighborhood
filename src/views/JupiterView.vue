@@ -2,6 +2,7 @@
 import PlanetDisplay from "@/components/PlanetDisplay.vue";
 import jupiter from "@/assets/planets/planet-jupiter.svg";
 import jupiterInternal from "@/assets/planets/planet-jupiter-internal.svg";
+import jupiterGeology from "@/assets/planets/geology-jupiter.png";
 
 const tabs = [
   {
@@ -31,6 +32,7 @@ const tabs = [
     source:
       "https://en.wikipedia.org/wiki/Jupiter#Great_Red_Spot_and_other_vortices",
     img: jupiter,
+    imgGeo: jupiterGeology,
   },
 ];
 
