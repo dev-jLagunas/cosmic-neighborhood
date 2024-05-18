@@ -111,8 +111,18 @@ const close3Dmodel = () => {
   </article>
   <section v-if="show3dModel" class="fixed inset-0">
     <planet-3-d-model :planetSkin="planetSkin"></planet-3-d-model>
+    <h1
+      class="text-4xl text-slate-300 absolute bottom-40 left-10 font-bold tracking-widest"
+    >
+      {{ props.tabs[0].planet }}
+    </h1>
+    <p
+      class="text-sm text-slate-300 absolute bottom-32 left-10 font-bold tracking-widest"
+    >
+      INTERACT WITH ME
+    </p>
     <button
-      class="text-6xl text-slate-300 absolute top-10 left-10 font-bold"
+      class="text-4xl text-slate-300 absolute top-10 left-10 font-bold"
       @click="close3Dmodel"
     >
       X

@@ -9,6 +9,7 @@ const props = defineProps(["planetSkin"]);
 
 // Scene
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x000117);
 
 // Load Textures
 const textureLoader = new THREE.TextureLoader();
