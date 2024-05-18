@@ -39,11 +39,17 @@ const planetData = {
   radius: "58,232 KM",
   temperature: "-138°c",
 };
+
+const planetSkin = "src/assets/3d-skins/saturn-skin.jpg";
 </script>
 
 <template>
   <section>
-    <PlanetDisplay :tabs="tabs" :planet-data="planetData" />
+    <PlanetDisplay
+      :tabs="tabs"
+      :planet-data="planetData"
+      :planetSkin="planetSkin"
+    />
   </section>
 </template>
 

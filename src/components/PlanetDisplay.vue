@@ -1,10 +1,12 @@
 <script setup>
 import { ref, computed } from "vue";
+import Planet3DModel from "./Planet3DModel.vue";
 
 // Props
 const props = defineProps({
   tabs: Array,
   planetData: Object,
+  planetSkin: String,
 });
 
 // State
@@ -15,10 +17,20 @@ const activeTabContent = computed(() => {
   return props.tabs.filter((tab) => tab.id === activeTab.value);
 });
 
+let show3dModel = ref(false);
+
 // Method
 const changeTab = (id) => {
   activeTab.value = id;
   animate.value = true;
+};
+
+const open3DModel = () => {
+  show3dModel.value = true;
+};
+
+const close3Dmodel = () => {
+  show3dModel.value = false;
 };
 </script>
 
@@ -87,15 +99,25 @@ const changeTab = (id) => {
       </ul>
     </div>
     <div
-      class="w-90vw mx-auto my-4 hover:bg-slate-500 hover:bg-opacity-50 duration-300 lg:w-2/3"
+      class="w-90vw mx-auto my-4 hover:bg-slate-500 hover:bg-opacity-50 duration-300 lg:w-2/3 2xl:w-1/3"
     >
       <button
         class="text-xl border border-slate-700 px-4 py-2 w-full text-slate-300"
+        @click="open3DModel"
       >
         See 3D Model
       </button>
     </div>
   </article>
+  <section v-if="show3dModel" class="fixed inset-0">
+    <planet-3-d-model :planetSkin="planetSkin"></planet-3-d-model>
+    <button
+      class="text-6xl text-slate-300 absolute top-10 left-10 font-bold"
+      @click="close3Dmodel"
+    >
+      X
+    </button>
+  </section>
 </template>
 
 <style scoped>

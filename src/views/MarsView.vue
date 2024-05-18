@@ -39,11 +39,17 @@ const planetData = {
   radius: "3,389.5 KM",
   temperature: "-28°c",
 };
+
+const planetSkin = "src/assets/3d-skins/mars-skin.jpg";
 </script>
 
 <template>
   <section>
-    <PlanetDisplay :tabs="tabs" :planet-data="planetData" />
+    <PlanetDisplay
+      :tabs="tabs"
+      :planet-data="planetData"
+      :planetSkin="planetSkin"
+    />
   </section>
 </template>
 
