@@ -1,13 +1,14 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import MercuryView from "../views/MercuryView.vue";
-import VenusView from "@/views/VenusView.vue";
-import EarthView from "@/views/EarthView.vue";
-import MarsView from "@/views/MarsView.vue";
-import JupiterView from "@/views/JupiterView.vue";
-import SaturnView from "@/views/SaturnView.vue";
-import UranusView from "@/views/UranusView.vue";
-import NeptuneVue from "@/views/NeptuneView.vue";
+
+const HomeView = () => import("@/views/HomeView.vue");
+const MercuryView = () => import("@/views/MercuryView.vue");
+const VenusView = () => import("@/views/VenusView.vue");
+const EarthView = () => import("@/views/EarthView.vue");
+const MarsView = () => import("@/views/MarsView.vue");
+const JupiterView = () => import("@/views/JupiterView.vue");
+const SaturnView = () => import("@/views/SaturnView.vue");
+const UranusView = () => import("@/views/UranusView.vue");
+const NeptuneView = () => import("@/views/NeptuneView.vue");
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -19,7 +20,7 @@ const router = createRouter({
     },
     {
       path: "/mercury",
-      name: "mecury",
+      name: "mercury",
       component: MercuryView,
     },
     {
@@ -55,7 +56,7 @@ const router = createRouter({
     {
       path: "/neptune",
       name: "neptune",
-      component: NeptuneVue,
+      component: NeptuneView,
     },
     {
       path: "/:pathMatch(.*)",
