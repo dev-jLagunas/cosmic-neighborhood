@@ -8,11 +8,14 @@ const { triggerAnimation } = useAnimationStore();
 // Router
 const router = useRouter();
 const navigate = async (to) => {
-  if (router.currentRoute.value.name === "home") {
-    await triggerAnimation();
+  try {
+    if (router.currentRoute.value.name === "home") {
+      await triggerAnimation();
+    }
+    await router.push(to);
+  } catch (error) {
+    console.error("Navigation error:", error);
   }
-
-  router.push(to);
 };
 </script>
 
@@ -20,28 +23,44 @@ const navigate = async (to) => {
   <nav class="border-b w-full py-4">
     <ul class="flex justify-evenly text-slate-200">
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/mercury')">MERCURY</a>
+        <button @click="navigate('/mercury')" aria-label="Navigate to Mercury">
+          MERCURY
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/venus')">VENUS</a>
+        <button @click="navigate('/venus')" aria-label="Navigate to Venus">
+          VENUS
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/earth')">EARTH</a>
+        <button @click="navigate('/earth')" aria-label="Navigate to Earth">
+          EARTH
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/mars')">MARS</a>
+        <button @click="navigate('/mars')" aria-label="Navigate to Mars">
+          MARS
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/jupiter')">JUPITER</a>
+        <button @click="navigate('/jupiter')" aria-label="Navigate to Jupiter">
+          JUPITER
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/saturn')">SATURN</a>
+        <button @click="navigate('/saturn')" aria-label="Navigate to Saturn">
+          SATURN
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/uranus')">URANUS</a>
+        <button @click="navigate('/uranus')" aria-label="Navigate to Uranus">
+          URANUS
+        </button>
       </li>
       <li class="hover:scale-125 duration-500 ease-in-out cursor-pointer">
-        <a @click="navigate('/neptune')">NEPTUNE</a>
+        <button @click="navigate('/neptune')" aria-label="Navigate to Neptune">
+          NEPTUNE
+        </button>
       </li>
     </ul>
   </nav>
