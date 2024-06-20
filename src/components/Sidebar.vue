@@ -3,16 +3,19 @@ import { defineEmits } from "vue";
 import { useRouter } from "vue-router";
 import { useAnimationStore } from "@/stores/animationStore";
 import PlanetLink from "../components/PlanetLink.vue";
-import mercury from "@/assets/planets/planet-mercury.svg";
-import venus from "@/assets/planets/planet-venus.svg";
-import earth from "@/assets/planets/planet-earth.svg";
-import mars from "@/assets/planets/planet-mars.svg";
-import jupiter from "@/assets/planets/planet-jupiter.svg";
-import saturn from "@/assets/planets/planet-saturn.svg";
-import uranus from "@/assets/planets/planet-uranus.svg";
-import neptune from "@/assets/planets/planet-neptune.svg";
 
-// store
+const planetImages = {
+  mercury: () => import("@/assets/planets/planet-mercury.svg"),
+  venus: () => import("@/assets/planets/planet-venus.svg"),
+  earth: () => import("@/assets/planets/planet-earth.svg"),
+  mars: () => import("@/assets/planets/planet-mars.svg"),
+  jupiter: () => import("@/assets/planets/planet-jupiter.svg"),
+  saturn: () => import("@/assets/planets/planet-saturn.svg"),
+  uranus: () => import("@/assets/planets/planet-uranus.svg"),
+  neptune: () => import("@/assets/planets/planet-neptune.svg"),
+};
+
+// Store
 const { triggerAnimation } = useAnimationStore();
 
 // Emits
@@ -33,56 +36,56 @@ const navigate = async (to) => {
   <nav class="mt-60 overflow-x-hidden overflow-y-visible z-50">
     <ul class="flex flex-col text-slate-200">
       <PlanetLink
-        :imgSrc="mercury"
+        :imgSrc="planetImages.mercury"
         name="Mercury"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0s"
         @click="navigate('/mercury')"
       />
       <PlanetLink
-        :imgSrc="venus"
+        :imgSrc="planetImages.venus"
         name="Venus"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.1s"
         @click="navigate('/venus')"
       />
       <PlanetLink
-        :imgSrc="earth"
+        :imgSrc="planetImages.earth"
         name="Earth"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.2s"
         @click="navigate('/earth')"
       />
       <PlanetLink
-        :imgSrc="mars"
+        :imgSrc="planetImages.mars"
         name="Mars"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.3s"
         @click="navigate('/mars')"
       />
       <PlanetLink
-        :imgSrc="jupiter"
+        :imgSrc="planetImages.jupiter"
         name="Jupiter"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.4s"
         @click="navigate('/jupiter')"
       />
       <PlanetLink
-        :imgSrc="saturn"
+        :imgSrc="planetImages.saturn"
         name="Saturn"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.5s"
         @click="navigate('/saturn')"
       />
       <PlanetLink
-        :imgSrc="uranus"
+        :imgSrc="planetImages.uranus"
         name="Uranus"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.6s"
         @click="navigate('/uranus')"
       />
       <PlanetLink
-        :imgSrc="neptune"
+        :imgSrc="planetImages.neptune"
         name="Neptune"
         class="planet-link hover:bg-slate-800 bg-opacity-45 duration-500"
         style="animation-delay: 0.7s"
