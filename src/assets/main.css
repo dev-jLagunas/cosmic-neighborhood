@@ -18,9 +18,15 @@ GLOBAL STYLES
 ***************************************************/
 
 body {
-  background-image: url("../assets/bg/spacebg.jpg");
+  background-image: url("../assets/bg/spacebg-desktop.webp");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   font-family: "Antonio";
+}
+
+@media (width <= 768px) {
+  body {
+    background-image: url("../assets/bg/spacebg-mobile.webp");
+  }
 }

@@ -5,14 +5,14 @@ import { useAnimationStore } from "@/stores/animationStore";
 import PlanetLink from "../components/PlanetLink.vue";
 
 const planetImages = {
-  mercury: () => import("@/assets/planets/planet-mercury.svg"),
-  venus: () => import("@/assets/planets/planet-venus.svg"),
-  earth: () => import("@/assets/planets/planet-earth.svg"),
-  mars: () => import("@/assets/planets/planet-mars.svg"),
-  jupiter: () => import("@/assets/planets/planet-jupiter.svg"),
-  saturn: () => import("@/assets/planets/planet-saturn.svg"),
-  uranus: () => import("@/assets/planets/planet-uranus.svg"),
-  neptune: () => import("@/assets/planets/planet-neptune.svg"),
+  mercury: new URL("@/assets/planets/planet-mercury.svg", import.meta.url).href,
+  venus: new URL("@/assets/planets/planet-venus.svg", import.meta.url).href,
+  earth: new URL("@/assets/planets/planet-earth.svg", import.meta.url).href,
+  mars: new URL("@/assets/planets/planet-mars.svg", import.meta.url).href,
+  jupiter: new URL("@/assets/planets/planet-jupiter.svg", import.meta.url).href,
+  saturn: new URL("@/assets/planets/planet-saturn.svg", import.meta.url).href,
+  uranus: new URL("@/assets/planets/planet-uranus.svg", import.meta.url).href,
+  neptune: new URL("@/assets/planets/planet-neptune.svg", import.meta.url).href,
 };
 
 // Store

@@ -1,7 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useAnimationStore = defineStore({
-  id: "animation",
+export const useAnimationStore = defineStore("animation", {
   state: () => ({
     triggeredByRouting: false,
   }),
